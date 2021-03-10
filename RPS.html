@@ -49,14 +49,13 @@
 				let playerSelection;
 				let computerSelection;
 
-				if (youScore == 5) {
-					console.log("You WIN the game!");
-				} else if (computerScore == 5) {
-					console.log("You LOSE the game!");
-				} else {
+				for (let i = 1; i < 100; i++) {
 
-					for (let i = 1; i < 100; i++) {
-
+					if (youScore == 5) {
+						console.log("You WON the game!");
+					} else if (computerScore == 5) {
+						console.log("You LOSE the game!");
+					} else {
 						playerSelection = prompt("Choose a tool");
 						computerSelection = computerPlay();
 
@@ -95,7 +94,6 @@
 						console.log("Comp's Score: ", computerScore);
 					}
 				}
-
 			}
 			game();
 
