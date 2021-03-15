@@ -3,6 +3,7 @@
 	<head>
 		<meta charset="utf-8">
 		<title>Rock Paper Scissors Game</title>
+		<link href="styles/styles.css" rel="stylesheet">
 	</head>
 
 	<body>
@@ -53,8 +54,10 @@
 
 					if (youScore == 5) {
 						console.log("You WON the game!");
+						break;
 					} else if (computerScore == 5) {
 						console.log("You LOSE the game!");
+						break;
 					} else {
 						playerSelection = prompt("Choose a tool");
 						computerSelection = computerPlay();
