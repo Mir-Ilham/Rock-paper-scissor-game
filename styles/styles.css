@@ -1,0 +1,200 @@
+/* ----------------------- CSS Resets -------------------------*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+/* ------------------------------------------------------------*/
+
+/* Generic */
+
+html, body {
+	height: 100%;
+}
+* {
+	box-sizing: border-box;
+}
+body {
+	background-image: url('../images/dojo.jpg');
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+/* Headings */
+
+h1 {
+	font-family: 'Shojumaru', cursive;
+	font-size: 4rem;
+	padding: 5px 0;
+	text-align: center;
+	height: 12%;
+	color: #fff;
+}
+.players {
+	width: 100%;
+	height: 8%;
+	display: flex;
+	justify-content: space-between;
+	color: #fff;
+	background-color: rgba(0, 0, 0, 0.8);
+}
+.you, .comp-ninja {
+	font-family: 'Shojumaru', cursive;
+	font-size: 2.5rem;
+	height: 100%;
+	border: 1px solid #fff;
+	min-width: 350px;
+	text-align: center;
+	padding: 5px 0;
+}
+.vs {
+	font-family: 'Shojumaru', cursive;
+	font-size: 3rem;
+	height: 100%;
+	color: #eb0723;
+	padding: 5px 0;
+}
+
+/* Main section i.e. Dojo */
+
+.dojo {
+	width: 100%;
+	height: 50%;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+}
+.button-section p {
+	color: #fff;
+	text-align: center;
+	font-size: 1.2rem;
+	font-family: 'Nunito', sans-serif;
+}
+.button-section {
+	height: 100%;
+	min-width: 300px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	background-color: rgba(0, 0, 0, 0.8);
+	border-left: 1px solid #fff;
+	border-right: 1px solid #fff;
+}
+.buttons {
+	border: 2px solid #fa4a30;
+	border-radius: 15px;
+	text-align: center;
+	padding: 10px 0;
+	font-size: 1.2rem;
+	color: #fff;
+	background-color: rgba(0, 0, 0, 0.8);
+	font-family: 'Nunito', sans-serif;
+	cursor: pointer;
+}
+.buttons-shadow {
+	box-shadow: 0 0 1rem #e34734;
+	background-color: rgba(0, 0, 0, 1);
+}
+.buttons:focus {
+	outline: none;
+}
+.background-adjust {
+	background-color: #fff;
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-size: contain;
+}
+#your-move, #comp-move {
+	min-width: 270px;
+	min-height: 270px;
+	border-radius: 50%;
+}
+#comp-choose {
+	border-left: 1px solid #fff;
+	border-right: 1px solid #fff;
+	background-color: rgba(0, 0, 0, 0.8);
+	min-width: 300px;
+	height: 100%;
+	color: #e34734;
+	font-size: 2rem;
+	text-align: center;
+	padding: 100px 0;
+	font-family: 'Nunito', sans-serif;
+}
+
+/* Display Section */
+
+#display {
+	border: 1px solid #fff;
+	background-color: rgba(0, 0, 0, 0.9);
+	width: 100%;
+	height: 10%;
+	text-align: center;
+	color: #e34734;
+	font-size: 3rem;
+	padding: 5px 0;
+	font-family: 'Nunito', sans-serif;
+}
+.play-again {
+	border: 2px solid #fa4a30;
+	border-radius: 15px;
+	text-align: center;
+	padding: 10px 5px;
+	font-size: 1.2rem;
+	color: #fff;
+	background-color: rgba(0, 0, 0, 0.8);
+	font-family: 'Nunito', sans-serif;
+	margin-left: 20px;
+	text-decoration: none;
+}
+.play-again:hover {
+	box-shadow: 0 0 1rem #e34734;
+	background-color: rgba(0, 0, 0, 1);
+}
+
+/* Score Section */
+
+.score-section {
+	width: 100%;
+	height: 20%;
+	display: flex;
+	justify-content: space-around;
+}
+#your-score, #comp-score {
+	border-left: 1px solid #fff;
+	border-right: 1px solid #fff;
+	height: 100%;
+	min-width: 200px;
+	text-align: center;
+	background-color: rgba(0, 0, 0, 0.8);
+	color: #fff;
+	font-size: 1.5rem;
+	padding: 45px 0;
+	font-family: 'Nunito', sans-serif;
+}

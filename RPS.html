@@ -4,103 +4,43 @@
 		<meta charset="utf-8">
 		<title>Rock Paper Scissors Game</title>
 		<link href="styles/styles.css" rel="stylesheet">
+		<link rel="preconnect" href="https://fonts.gstatic.com">
+		<link href="https://fonts.googleapis.com/css2?family=Shojumaru&display=swap" rel="stylesheet">
+		<link rel="preconnect" href="https://fonts.gstatic.com">
+		<link href="https://fonts.googleapis.com/css2?family=Nunito&display=swap" rel="stylesheet">
 	</head>
 
 	<body>
 
-		<script>
-			function computerPlay() {
-				let random = Math.random();
-				if (random < 0.33) {
-					return "Rock";
-				} else if (random < 0.66) {
-					return "Paper";
-				} else {
-					return "Scissors";
-				}
-			}
+		<h1>The RPS Dojo</h1>
+		<div class="players">
+			<div class="you">You</div>
+			<div class="vs">VS</div>
+			<div class="comp-ninja">CompNinja</div>
+		</div>
 
-			function playRound(playerSelection, computerSelection) {
+		<div class="dojo">
+			<div class="button-section">
+				<p>Choose Your Move</p>
+				<button class="buttons" id="rock">Rock fist</button>
+				<button class="buttons" id="paper">Paper slice</button>
+				<button class="buttons" id="scissors">Scissors cut</button>
+			</div>
 
-				if (playerSelection.toLowerCase() == "rock" || playerSelection.toLowerCase() == "scissors" || playerSelection.toLowerCase() == "paper") {
+			<div class="background-adjust" id="your-move"></div>
 
-					if (playerSelection.toLowerCase() == "rock" && computerSelection == "Scissors") {
-						return 1;
-					} else if (playerSelection.toLowerCase() == "scissors" && computerSelection == "Paper") {
-						return 2;
-					} else if (playerSelection.toLowerCase() == "paper" && computerSelection == "Rock") {
-						return 3;
-					} else if (playerSelection.toLowerCase() == "scissors" && computerSelection == "Rock") {
-						return 4;
-					} else if (playerSelection.toLowerCase() == "paper" && computerSelection == "Scissors") {
-						return 5;
-					} else if (playerSelection.toLowerCase() == "rock" && computerSelection == "Paper") {
-						return 6;
-					} else return "It\'s a tie";
+			<div class="background-adjust" id="comp-move"></div>
+			<div id="comp-choose"></div>
+		</div>
 
-				} else return "Choose: Rock, Scissors or Paper.";
+		<div id="display"></div>
 
-			}
+		<div class="score-section">
+			<div id="your-score">Your Score</div>
+			<div id="comp-score">Comp's Score</div>
+		</div>
 
-
-			function game() {
-				let youScore = 0;
-				let computerScore = 0;
-				let score;
-				let playerSelection;
-				let computerSelection;
-
-				for (let i = 1; i < 100; i++) {
-
-					if (youScore == 5) {
-						console.log("You WON the game!");
-						break;
-					} else if (computerScore == 5) {
-						console.log("You LOSE the game!");
-						break;
-					} else {
-						playerSelection = prompt("Choose a tool");
-						computerSelection = computerPlay();
-
-						score = playRound(playerSelection, computerSelection);
-
-						switch (score) {
-							case 1:
-								youScore += 1;
-								console.log("You win! Rock beats Scissors");
-								break;
-							case 2:
-								youScore += 1;
-								console.log("You win! Scissors beats Paper");
-								break;
-							case 3:
-								youScore += 1;
-								console.log("You win! Paper beats Rock");
-								break;
-							case 4:
-								computerScore += 1;
-								console.log("You lose! Rock beats Scissors");
-								break;
-							case 5:
-								computerScore += 1;
-								console.log("You lose! Scissors beats Paper");
-								break;
-							case 6:
-								computerScore += 1;
-								console.log("You lose! Paper beats Rock");
-								break;
-							default:
-								console.log(score);	
-						}
-
-						console.log("Your Score: ", youScore);
-						console.log("Comp's Score: ", computerScore);
-					}
-				}
-			}
-			game();
-
-		</script>
+		<script src="scripts/script.js"></script>
 
 	</body>
 
