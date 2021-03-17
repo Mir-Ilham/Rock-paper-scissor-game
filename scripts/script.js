@@ -23,7 +23,7 @@ scissors.addEventListener('mouseleave', removeShadow);
 
 playAgainBtn.textContent = "Play Again";
 playAgainBtn.classList.add('play-again');
-playAgainBtn.href = "file:///home/ilham/Web-Development-Projects/Rock-paper-scissor-game/RPS.html";
+playAgainBtn.href = "https://mir-ilham.github.io/Rock-paper-scissor-game/";
 
 function addShadow() {
 	event.target.classList.add('buttons-shadow');
